@@ -1,21 +1,44 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from 'gatsby'
 
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
 
-const IndexPage = () => (
+function getPosts(data) {
+
+  let posts = [];
+  let postsList = data.allMarkdownRemark.edges;
+  postsList.forEach(element => {
+    let postData = element.node.frontmatter;
+
+    posts.push(
+      <Link to={postData.slug} ><h1>{postData.title}</h1></Link>
+    );
+  });
+
+  return posts;
+}
+
+const IndexPage = ({ data }) => {
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    { getPosts(data) }
   </Layout>
-)
+}
 
 export default IndexPage
+
+export const postsQuery = graphql`
+query postsQuery{
+  allMarkdownRemark (
+    sort: { fields: [frontmatter___date], order: DESC }
+  ) {
+    edges {
+      node {
+        frontmatter {
+          slug
+          title
+        }
+      }
+    }
+  }
+}
+`
