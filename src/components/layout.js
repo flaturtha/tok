@@ -18,6 +18,7 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          description
         }
       }
     }
@@ -33,11 +34,20 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
+        <main siteDescription={data.site.siteMetadata.description} >{children}</main>
+        
+        <footer style={{
+          marginTop: '2rem',
+          borderTop: '1px solid #242424',
+          paddingTop: '1rem',
+          textAlign: 'center',
+          fontSize: '0.75rem'
+        }}
+        >
+          From the warped mind of &hellip;
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="https://www.mboris.com" style={{textTransform: "uppercase"}}>M. Boris</a>
+          <p>© {new Date().getFullYear()} <em>Classic Pulps Publishing, LLC</em></p>
         </footer>
       </div>
     </>
