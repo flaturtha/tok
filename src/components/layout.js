@@ -37,16 +37,16 @@ const Layout = ({ children }) => {
         <main siteDescription={data.site.siteMetadata.description} >{children}</main>
         
         <footer style={{
-          marginTop: '2rem',
+          margin: '2rem 0 -2rem 0',
           borderTop: '1px solid #242424',
-          paddingTop: '1rem',
+          padding: '1rem 0 0 0',
           textAlign: 'center',
           fontSize: '0.75rem'
         }}
         >
           From the warped mind of &hellip;
           {` `}
-          <a href="https://www.mboris.com" style={{textTransform: "uppercase"}}>M. Boris</a>
+          <a href="https://www.mboris.com" style={{textDecoration: 'underline', color: '#000050', fontWeight: 'normal' }}>M. Boris</a>
           <p>© {new Date().getFullYear()} <em>Classic Pulps Publishing, LLC</em></p>
         </footer>
       </div>
