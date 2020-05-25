@@ -71,7 +71,7 @@ const IndexPage = ({  siteDescription }) => (
       </div>
     </div>
     <div style={{ textAlign: 'center' }}>
-      <button style={{ boxShadow: '6px 6px 9px 3px rgba(36,36,36,1)', backgroundColor: 'white', margin: '0 auto', padding: '1rem', border: '1px solid #242424', borderRadius: '5px', textAlign: 'center' }}>Read THE GODS WHO ARE REJECTED</button>
+      <button style={{ boxShadow: '6px 6px 9px 3px rgba(36,36,36,1)', backgroundColor: 'white', margin: '0 auto 2rem', padding: '1rem', border: '1px solid #242424', borderRadius: '5px', textAlign: 'center' }}>Read THE GODS WHO ARE REJECTED</button>
       <div style={{ marginTop: '2rem', textAlign: 'left', fontSize: '0.875rem', width: '500px', margin: '0 auto', padding: '0' }}>
         <p>Email subscription required to access the stories. You will receive eight stories by email over eight days, plus have additional access to behind-the-scenes stories, opportunity to be a <em>beta</em> reader and/or part of the book launch team.</p>
         <p><em>Beta</em> readers &amp; launch team members get early (and sometimes free) access to new novellas before they are published. Help develop the stories as they are written and promote them to your network of reader friends.</p>
