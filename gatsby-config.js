@@ -2,9 +2,11 @@ module.exports = {
   siteMetadata: {
     title: `Tentacle Cult`,
     description: `Wherein, I will attempt to tell the tale of Colonel Aloysius Krill &amp; the Tentacle Cult &hellip; how he came to anger the Gods Who Are Rejected.`,
-    author: `@gatsbyjs`,
+    author: `Rich Cook`,
+    siteUrl: 'https://tentaclecult.com'
   },
   plugins: [
+    'gatsby-plugin-sitemap',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
