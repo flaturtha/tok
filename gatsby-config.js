@@ -6,6 +6,12 @@ module.exports = {
     siteUrl: 'https://tentaclecult.com'
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-postcss',
+      options: {
+        postCssPlugins: [require("tailwindcss"), require("autoprefixer")]
+      }
+    },
     'gatsby-plugin-sitemap',
     `gatsby-plugin-react-helmet`,
     {
@@ -52,5 +58,13 @@ module.exports = {
           ],
         },
       },
+      {
+        resolve: 'gatsby-plugin-purgecss',
+        options: {
+          printRejected: false,
+          develop: false,
+          tailwind: true,
+        },
+      }
   ],
 }

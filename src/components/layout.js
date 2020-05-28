@@ -27,13 +27,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `1rem auto 0`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <div className="container mx-auto">
         <main siteDescription={data.site.siteMetadata.description} >{children}</main>
         
         <footer style={{
