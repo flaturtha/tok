@@ -30,20 +30,13 @@ const Layout = ({ children }) => {
       <div className="container mx-auto">
         <main siteDescription={data.site.siteMetadata.description} >{children}</main>
         
-        <footer style={{
-          margin: '2rem 0 -2rem 0',
-          borderTop: '1px solid #242424',
-          padding: '1rem 0 0 0',
-          textAlign: 'center',
-          fontSize: '0.75rem'
-        }}
-        >
+        </div>
+        <footer className="bg-kraken-900 text-white mt-8 mx-0 px-0 py-4 text-center text-xs">
           From the warped mind of &hellip;
           {` `}
-          <a href="https://www.mboris.com" style={{textDecoration: 'underline', color: '#000050', fontWeight: 'normal' }}>M. Boris</a>
+          <a href="https://www.mboris.com" style={{textDecoration: 'underline', color: '#fff', fontWeight: 'normal' }}>M. Boris</a>
           <p>© {new Date().getFullYear()} <em>Classic Pulps Publishing, LLC</em></p>
         </footer>
-      </div>
     </>
   )
 }

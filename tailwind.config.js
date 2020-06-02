@@ -1,9 +1,12 @@
 module.exports = {
   purge: [],
   theme: {
+    fontFamily: {
+      'display': ['Lydian Regular']
+    },
     extend: {
       colors: {
-        'purple-heart': {
+        'kraken': {
           100: '#F5ECFF',
           200: '#E7D0FE',
           300: '#D8B4FD',
